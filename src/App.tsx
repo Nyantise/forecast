@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { getForecast, getWeather } from './api';
+import Info from './components/info';
 import Search from './components/search';
 import { ColorContext } from './globalProvider';
 
@@ -8,11 +9,10 @@ import { ColorContext } from './globalProvider';
 function App() {
   const [weather, setWeather] = useState<any>(null);
   const [forecast, setForecast] = useState<any[]>([]);
-  const {color, setColor} = useContext(ColorContext)
+  const {color} = useContext(ColorContext)
 
   const handleSearch = async (cityName: string) => {
     try {
-      setColor("#5019dc")
       if(cityName === "") return
       
       setWeather(await getWeather(cityName));
@@ -33,6 +33,7 @@ function App() {
     <Container color={color}>
       <h1>Levo um casaquinho?</h1>
       <Search onSearch={handleSearch} />
+      {weather && <Info data={weather} />}
     </Container>
   );
 }
@@ -44,7 +45,7 @@ export default App
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    transition: color 0.3s;
+    transition: all 0.4s;
     h1 {
         color: ${props => props.color};
         font-size: 36px;
