@@ -4,6 +4,8 @@
 
 Uma aplicação web simples que permite aos usuários inserir o nome de uma cidade e obter informações sobre a temperatura atual, máxima, mínima e a previsão para os próximos dias.
 
+link do deploy: https://forecast-nya.netlify.app/
+
 ## Funcionalidades
 
 - **Barra de pesquisa**: Os usuários podem inserir o nome de uma cidade para obter informações sobre o clima.
@@ -12,19 +14,10 @@ Uma aplicação web simples que permite aos usuários inserir o nome de uma cida
 
 ## Tecnologias Utilizadas
 
-- **React (com Vite)**: A aplicação foi construída usando React com a ferramenta de build Vite.
+- **React (com Vite e TypeScript)**: A aplicação foi construída usando React com a ferramenta de build Vite.
 - **Styled Components**: Utilizado para estilização dos componentes.
 - **Recharts**: Biblioteca utilizada para construção do gráfico de previsão.
 - **OpenWeatherMap API**: API pública utilizada para obter os dados do clima.
-
-## Estrutura do Projeto
-
-- `src/components`: Contém todos os componentes React utilizados na aplicação.
-  - `SearchBar`: Componente para inserir o nome da cidade e buscar informações.
-  - `WeatherInfo`: Componente que exibe informações sobre a temperatura atual, máxima e mínima.
-  - `WeatherChart`: Componente que exibe um gráfico com a previsão de temperatura para os próximos dias.
-- `src/api`: Contém funções para fazer chamadas à API OpenWeatherMap.
-- `src/GlobalStyles.ts`: Estilos globais e reset de estilos para a aplicação.
 
 ## Como Usar
 
