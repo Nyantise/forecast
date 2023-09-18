@@ -49,7 +49,6 @@ export const Container = styled.form`
     border-radius: 4px;
     outline: none;
     width: 100%;
-    transition: all 0.4s;
     border-color: ${props => props.color};
   }
   
@@ -61,6 +60,5 @@ export const Container = styled.form`
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.4s;
   }
 `;

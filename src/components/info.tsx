@@ -64,7 +64,6 @@ const Container = styled.div`
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: ${props => props.color};
-  transition: all 0.4s;
   margin: 20px 0;
 
   .left {

@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { getForecast, getWeather } from './api';
+import Chart from './components/chart';
 import Info from './components/info';
 import Search from './components/search';
 import { ColorContext } from './globalProvider';
@@ -34,6 +35,7 @@ function App() {
       <h1>Levo um casaquinho?</h1>
       <Search onSearch={handleSearch} />
       {weather && <Info data={weather} />}
+      {forecast.length > 0 && <Chart data={forecast} />}
     </Container>
   );
 }
@@ -43,6 +45,7 @@ export default App
 
 // S T Y L E //
 const Container = styled.div`
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     transition: all 0.4s;
