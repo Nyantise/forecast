@@ -56,6 +56,7 @@ const Info: React.FC<{ data: any }> = ({ data }) => {
 export default Info;
 
 
+// S T Y L E //
 const Container = styled.div`
   display: flex;
   justify-content: space-between;

@@ -30,7 +30,6 @@ const Search: React.FC<{ onSearch: (city: string) => void }> = ({ onSearch }) =>
     </Container>
   );
 };
-
 export default Search;
 
 
@@ -43,10 +42,11 @@ export const Container = styled.form`
   margin: 20px 0;
 
   input{
-    padding: 10px;
+    padding: 8px;
     font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+    border: 4px solid #ccc;
+    background-color:${props => adjust(props.color, -70)};
+    border-radius: 8px;
     outline: none;
     width: 100%;
     border-color: ${props => props.color};
@@ -55,10 +55,15 @@ export const Container = styled.form`
   button{
     padding: 10px 15px;
     font-size: 16px;
-    background-color:${props => props.color};;
+    background-color:${props => props.color};
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
   }
 `;
+
+function adjust(color:string | undefined, amount:number) {
+  if(color === undefined) return
+  return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
+}
