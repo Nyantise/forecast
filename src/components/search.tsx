@@ -51,12 +51,15 @@ export const Container = styled.form`
     width: 100%;
     border-color: ${props => props.color};
   }
+  input::placeholder{
+    color: #e0e1e9;
+  }
   
   button{
     padding: 10px 15px;
     font-size: 16px;
     background-color:${props => props.color};
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 4px;
     cursor: pointer;

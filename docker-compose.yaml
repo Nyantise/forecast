@@ -1,0 +1,6 @@
+services:
+  front:
+    build: .
+    container_name: forecast
+    ports:
+      - 8080:80
