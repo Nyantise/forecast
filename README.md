@@ -15,30 +15,54 @@ link do deploy: https://forecast-nya.netlify.app/
 ## Tecnologias Utilizadas
 
 - **React (com Vite e TypeScript)**: A aplicação foi construída usando React com a ferramenta de build Vite.
+- **Docker**: A aplicação possui deploy no DockerHub e docker-compose.yaml.
 - **Styled Components**: Utilizado para estilização dos componentes.
 - **Recharts**: Biblioteca utilizada para construção do gráfico de previsão.
 - **OpenWeatherMap API**: API pública utilizada para obter os dados do clima.
 
 ## Como Usar
-
-1. **Clone o repositório**:
+###### Primeiro de tudo você vai precisar de uma chave api do [OpenWeatherMap](https://openweathermap.org), crie uma conta no site e gere a sua chave para a versão 2.5
+### Desenvolvimento
+1 - **Clone o repositório**:
 ```bash
-   git clone https://github.com/AnaLauraFFerraz/levo-um-casaquinho.git
+git clone https://github.com/AnaLauraFFerraz/levo-um-casaquinho.git
 ```
 
-2. **Instale as dependências**:
+2 - **Instale as dependências.**:
 ```bash
-   npm install
+npm install
 ```
 
-3. **Execute o projeto**:
+3 - **copie o arquivo .env.example:**:
 ```bash
-   npm run dev
+cp .env.example .env
+```
+4 - **Adicione sua chave da API à variável VITE_API_KEY.**:
+
+5 - **Execute o projeto em modo de desenvolvimento.**:
+```bash
+npm run dev
 ```
 
-4. Abra o navegador e acesse `http://localhost:3000`.
+6 - Abra o navegador e acesse `http://localhost:3000`.
 
-## Contribuições
+<br>
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou pull request.
+### Deploy
+
+**Se houver clonado o repositorio do git, execute o docker compose:**
+```bash
+docker compose up -d
+```
+Pronto, agora sempre que quiser servir o app:
+```bash
+docker compose start
+# e para parar:
+docker compose stop
+```
+
+ **Ou, baixe o container do DockerHub**
+```bash
+docker run -d --name forecast -p 8080:80 nyantise/forecast:0.0.3
+```
 
