@@ -63,6 +63,6 @@ docker compose stop
 
  **Ou, baixe o container do DockerHub**
 ```bash
-docker run -d --name forecast -p 8080:80 nyantise/forecast:0.0.3
+docker run -d --name forecast -p 8080:80 nyantise/forecast:0.0.4
 ```
 
