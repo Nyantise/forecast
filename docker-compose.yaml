@@ -1,6 +1,9 @@
 services: 
   front:
-    build: .
+    build:
+      context: .
+      args:
+        - VITE_API_KEY=$VITE_API_KEY
     container_name: front
     ports:
       - 8080:80

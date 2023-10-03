@@ -1,6 +1,8 @@
 # Build
 FROM node:alpine AS build
 
+ARG VITE_API_KEY="$VITE_API_KEY"
+
 WORKDIR /app
 
 COPY . .

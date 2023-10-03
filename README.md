@@ -35,7 +35,7 @@ npm install
 
 3 - **copie o arquivo .env.example:**:
 ```bash
-cp .env.example .env
+cp .example .env
 ```
 4 - **Adicione sua chave da API à variável VITE_API_KEY.**:
 
