@@ -25,7 +25,7 @@ link do deploy: https://forecast-nya.netlify.app/
 ### Desenvolvimento
 1 - **Clone o repositório**:
 ```bash
-git clone https://github.com/AnaLauraFFerraz/levo-um-casaquinho.git
+git clone https://github.com/Nyantise/forecast.git
 ```
 
 2 - **Instale as dependências.**:
@@ -44,7 +44,7 @@ cp .example .env
 npm run dev
 ```
 
-6 - Abra o navegador e acesse `http://localhost:3000`.
+6 - Abra o navegador e acesse `http://localhost:5173`.
 
 <br>
 
